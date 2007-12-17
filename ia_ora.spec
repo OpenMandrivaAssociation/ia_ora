@@ -8,7 +8,6 @@ URL:            http://www.mandrivalinux.com/
 BuildRequires:  kdelibs-devel
 BuildRequires:  kdebase-devel >= 3.1.94-11mdk
 Source0:        %{name}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Mandriva Ia Ora theme
