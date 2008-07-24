@@ -4,7 +4,7 @@
 Summary:        iIa Ora theme for kde
 Name:           ia_ora
 Version:        1.0
-Release:        %mkrel 10
+Release:        %mkrel 12
 License:        GPL
 Group:          Graphical desktop/Other
 URL:            http://www.mandrivalinux.com/
