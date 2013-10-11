@@ -1,31 +1,30 @@
 %define libname_kwin %mklibname %{name}-kde
 %define libname_kde %mklibname %{name}-kwin
 
-Summary:        iIa Ora theme for kde
-Name:           ia_ora
-Version:        1.0
-Release:        %mkrel 13
-License:        GPL
-Group:          Graphical desktop/Other
-URL:            http://www.mandrivalinux.com/
-BuildRequires:  kdelibs-devel
-BuildRequires:  kdebase-devel >= 3.1.94-11mdk
-Source0:        %{name}.tar.bz2
-Patch0:         %{name}-fix-makefile.patch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Summary:		Ia Ora theme for kde
+Name:			ia_ora
+Version:		1.0
+Release:		14
+License:		GPL
+Group:			Graphical desktop/Other
+URL:			%{disturl}
+BuildRequires:	kdelibs-devel
+BuildRequires:	kdebase-devel >= 3.1.94-11mdk
+Source0:		%{name}.tar.bz2
+Patch0:			%{name}-fix-makefile.patch
 
 %description
-Mandriva Ia Ora theme
+Ia Ora theme.
 
 #--------------------------------------------------------------------
  
 %package kde
-Summary: 	Mandriva theme for KDE - Widget design
+Summary: 	Ia Ora theme for KDE - Widget design
 Group: 		Graphical desktop/KDE
 Requires:       %libname_kde >= %version
 
 %description kde
-Mandriva theme for KDE - Widget design
+Ia Ora theme for KDE - Widget design.
 
 %files kde
 %defattr(-,root,root,-)
@@ -34,12 +33,12 @@ Mandriva theme for KDE - Widget design
 #--------------------------------------------------------------------
 
 %package -n %libname_kde
-Summary:        Mandriva theme for KDE - Widget design
+Summary:        Ia Ora theme for KDE - Widget design
 Group:          System/Libraries
 Conflicts:      %name-kde < 1.0-10
 
 %description -n %libname_kde
-Mandriva theme for KDE - Widget design
+Ia Ora theme for KDE - Widget design.
 
 %files -n %libname_kde
 %defattr(-,root,root,-)
@@ -49,12 +48,12 @@ Mandriva theme for KDE - Widget design
 #--------------------------------------------------------------------
 
 %package kde-kwin
-Summary:	Mandriva theme for KDE - Window Decorations
+Summary:	Ia Ora theme for KDE - Window Decorations
 Group:		Graphical desktop/KDE
 Requires:       %libname_kwin >= %version
 
 %description kde-kwin
-Mandriva theme for KDE - Window Decorations
+Ia Ora theme for KDE - Window Decorations.
 
 %files kde-kwin
 %defattr(-,root,root,-)
@@ -63,12 +62,12 @@ Mandriva theme for KDE - Window Decorations
 #--------------------------------------------------------------------
 
 %package -n %libname_kwin
-Summary:        Mandriva theme for KDE - Widget design
+Summary:        Ia Ora theme for KDE - Widget design
 Group:          System/Libraries
 Conflicts:      %name-kwin < 1.0-10
 
 %description -n %libname_kwin
-Mandriva theme for KDE - Widget design
+Ia Ora theme for KDE - Widget design.
 
 %files -n %libname_kwin
 %defattr(-,root,root,-)
@@ -100,10 +99,6 @@ export PATH=$QTDIR/bin:$KDEDIR/bin:$PATH
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 
 %makeinstall_std
 
-
-%clean
-rm -rf $RPM_BUILD_ROOT
